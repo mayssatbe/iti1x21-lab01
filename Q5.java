@@ -4,7 +4,7 @@ public class Q5 {
     boolean[] test = new boolean[8];
 
     //test for isPrime
-    test[0]  = (isPrime(0) == false);
+    test[0]  = (isPrime(0) == true);
     test[1] = (isPrime(2) == true);
     test[2] = (isPrime(7) == true);
     test[3] = (isPrime(15) == false);
@@ -35,14 +35,14 @@ public class Q5 {
   //method that determines if the number x is prime
   public static boolean isPrime(int x){
     boolean prime = true;
-    if(x < ){
-      prime = ;
+    if(x < 0 ){
+      prime = false ;
     }
-    if(x== ){
-      prime = ;
+    if(x== 2){
+      prime = true;
     }
     int i = 2;
-    while(prime && x < i){
+    while(prime && i < (x-1)){
       if(x % i == 0){
         prime = false;
       }
@@ -54,20 +54,20 @@ public class Q5 {
   //returns the fibonacci number at the position in parameter
   public static int getFibonacci(int position) {
 
-    int num = 0;
+    int num = 1;
     int num2 = 1;
     int fibonacci = 0;
 
-    if (position == ) {
+    if (position ==0 ) {
       fibonacci = 0;
     } else if (position == 1) {
-      fibonacci = ;
+      fibonacci = 1;
     } else {
-      for (int i = 2; ; ) {
-        fibonacci = ;
-        num = num2;
+		for (int i = 2;i<position ;i++) {
+        fibonacci =num ;
+        num = num2+num;
         num2 = fibonacci;
-      }
+        }
     }
     return num;
   }
