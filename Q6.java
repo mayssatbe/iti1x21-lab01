@@ -34,11 +34,30 @@ public class Q6 {
 		}
 
 		public static double calculateMedian(double[] notes){
+			int i, j, argMin, tmp;
+			double temp;
 			double med=0;
-			for (int i=0;i<notes.length;i++) {
-				 med=med+notes[i];
-		}return med/2;
+6
+7		for (i = 0; i < notes.length - 1; i++) {
+8			argMin = i;
+9			for (j = i + 1; j < notes.length; j++) {
+10				if (notes[j] < notes[argMin]) {
+11					argMin = j;
+12				}
+13			}
+14
+15			tmp = notes[argMin];
+16			notes[argMin] = notes[i];
+17			notes[i] = tmp;
+18		}
+			for (notes.length%2==0) {
+				 med=(notes[notes.length/2]+note[notes.legth/2-1])/2;
+			}return med;
 		}
+19
+20	
+			
+			
 
 		public static int calculateNumberFailed(double[] notes){
 			int nbFailed=0;
